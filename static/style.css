@@ -1,0 +1,208 @@
+body {
+	font-family: Verdana;
+	margin: 0px;
+}
+
+#unmade-top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.half {
+	width: 40%;
+	text-align: center;
+}
+
+#general-stats-top {
+	color: rgb(100,100,100);
+	display: block;
+	text-align: center;
+	position: relative;
+	left: -10%;
+	font-size: 2em;
+}
+
+#general-stats-stat {
+	font-size: 5em;
+	font-weight: 900;
+	text-align: center;
+	display: block;
+}
+
+#create-server, #server-stop {
+	background-color: red;
+	font-family: Verdana;
+	border: none;
+	font-size: calc(15px + 1vw);
+	padding: calc(3px + 0.2vw) calc(10px + 0.7vw);
+	color: white;
+	font-weight: 900;
+	cursor: pointer;
+	transition: opacity 0.2s;
+}
+
+#create-form, #server-info-container {
+	opacity: 0;
+	display: none;
+	transition: opacity 0.2s;
+}
+
+#create-form-message {
+	color: rgb(100,100,100);
+}
+
+input[type=text], input[type=password] {
+	border: 3px solid black;
+	font-size: calc(15px + 1vw);
+	font-family: Verdana;
+	display: block;
+	margin-top: calc(15px + 1vw);
+	margin-bottom: calc(15px + 1vw);
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	border: 3px solid red;
+	outline: none;
+}
+
+input[type=submit] {
+	border: none;
+	font-size: calc(15px + 1vw);
+	padding: calc(3px + 0.2vw) calc(10px + 0.7vw);
+	font-family: Verdana;
+	display: block;
+	font-weight: 900;
+	margin-top: calc(15px + 1vw);
+	margin-bottom: calc(15px + 1vw);
+	margin-left: auto;
+	margin-right: auto;
+	background-color: red;
+	color: white;
+	cursor: pointer;
+}
+
+#server-info-container span, #server-info-container a {
+	color: black;
+	font-size: 2em;
+	display: block;
+	text-align: center;
+	margin: 10px;
+}
+
+#server-ip {
+	color: red;
+	text-decoration: underline;
+}
+
+#server-info-container .small {
+	font-size: 1.5em;
+	color: rgb(100,100,100);
+}
+
+@media screen and (max-width: 1000px) {
+	#unmade-top {
+		display: block;
+	}
+	.half {
+		width: 100%;
+		min-height: 30vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	#general-stats-top {
+		left: 0px;
+		font-size: 1.5em;
+	}
+	#general-stats-stat {
+		font-size: 3em;
+	}
+}
+
+
+
+
+
+
+
+.custom-select {
+	position: relative;
+	margin-top: calc(15px + 1vw);
+	margin-bottom: calc(15px + 1vw);
+	width: 310px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: calc((15px + 1vw) / 1.4);
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-color: black transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent black transparent;
+  border-width: 10px;
+  top: calc((15px + 1vw) / 1.4 - 10px);
+}
+
+/* style the items (options), including the selected item: */
+.select-items div, .select-selected {
+	cursor: pointer;
+	border: 3px solid black;
+	font-size: calc(15px + 1vw);
+	font-family: Verdana;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.select-items div {
+	border-top: none;
+	font-size: calc(10px + 0.75vw);
+	font-weight: 300;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}

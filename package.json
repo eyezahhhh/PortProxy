@@ -1,0 +1,33 @@
+{
+  "name": "portproxy-client",
+  "version": "2.0.0",
+  "description": "Bypass port-forwarding restrictions!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "eyezah",
+  "license": "ISC",
+  "dependencies": {
+    "@geut/socket.io-streamify": "^1.0.0",
+    "async-request": "^1.2.0",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "net": "^1.0.2",
+    "open": "^8.4.0",
+    "socket.io": "^4.4.0",
+    "socket.io-client": "^4.4.0"
+  },
+  "bin": "index.js",
+  "pkg": {
+    "assets": [
+      "node_modules/**/*",
+      "static/*"
+    ],
+    "targets": [
+      "node12-macos-x64",
+      "node10-win-x64"
+    ]
+  }
+}

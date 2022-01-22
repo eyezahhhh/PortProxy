@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PortProxy</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" sizes="180x180" href="https://eyezah.com/portproxy/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://eyezah.com/portproxy/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://eyezah.com/portproxy/favicons/favicon-16x16.png">
+		<link rel="manifest" href="https://eyezah.com/portproxy/favicons/site.webmanifest">
+		<link rel="mask-icon" href="https://eyezah.com/portproxy/favicons/safari-pinned-tab.svg" color="#ff0000">
+		<link rel="shortcut icon" href="https://eyezah.com/portproxy/favicons/favicon.ico">
+		<meta name="msapplication-TileColor" content="#ff0000">
+		<meta name="msapplication-config" content="https://eyezah.com/portproxy/favicons/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+		<div id="unmade-top">
+			<div id="general-stats" class="half">
+				<div class="half-in">
+					<span id="general-stats-top">Available Servers</span>
+					<span id="general-stats-stat">...</span>
+				</div>
+			</div>
+			<div class="half">
+				<div class="half-in">
+					<button id="create-server" onClick="openServerForm()">Create Server</button>
+					<form id="create-form">
+						<span id="create-form-message"></span>
+						<input id="create-address" type="text" value="localhost" placeholder="Server Adress">
+						<input id="create-port" type="text" value="" placeholder="Server Port">
+						<div class="custom-select">
+							<select id="create-region">
+								<option value="0">Region</option>
+								<option value="usa">USA</option>
+								<option value="australia">Australia</option>
+							</select>
+						</div>
+						<input type="submit" value="Create Server">
+					</form>
+					<div id="server-info-container">
+						<span class="small">Go to</span>
+						<a id="server-ip" target="_blank"></a>
+						<span class="small">for your IP</span>
+						<br><br><br>
+						<span id="server-clientcount">Clients: 0</span>
+						<br><br><br>
+						<button id="server-stop" onClick="stopServer()">Stop Server</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
